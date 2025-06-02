@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Policy - Legally</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #333;
+            --accent-color: #c8a97e;
+            --text-color: #666;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'PT Serif', serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            background-color: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 3rem;
+            margin-top: 2rem;
+        }
+
+        .section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section h2 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .list {
+            list-style-type: none;
+            margin-left: 1.5rem;
+        }
+
+        .list li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .list li:before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+        }
+
+        .policy-box {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .policy-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-box.warning {
+            border-left-color: var(--warning-color);
+        }
+
+        .policy-box.success {
+            border-left-color: var(--success-color);
+        }
+
+        .policy-box.danger {
+            border-left-color: var(--danger-color);
+        }
+
+        .contact-info {
+            background-color: var(--light-bg);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-color);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .content {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>Refund Policy</h1>
+            <p>Legally - Legal Consultancy Services</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="section">
+                <h2>Introduction</h2>
+                <p>This Refund Policy outlines the terms and conditions for refunds of services provided by Legally. We are committed to ensuring customer satisfaction while maintaining fair and transparent refund practices in accordance with Saudi Arabian consumer protection laws.</p>
+            </div>
+
+            <div class="section">
+                <h2>Eligibility for Refunds</h2>
+                <div class="policy-box success">
+                    <h3>Refundable Services</h3>
+                    <ul class="list">
+                        <li>Initial consultation fees (if no legal advice has been provided)</li>
+                        <li>Subscription fees for unused periods</li>
+                        <li>Document preparation fees (if work has not commenced)</li>
+                    </ul>
+                </div>
+
+                <div class="policy-box warning">
+                    <h3>Partially Refundable Services</h3>
+                    <ul class="list">
+                        <li>Legal representation fees (pro-rated based on work completed)</li>
+                        <li>Document review services (based on completion percentage)</li>
+                        <li>Training sessions (if cancelled with sufficient notice)</li>
+                    </ul>
+                </div>
+
+                <div class="policy-box danger">
+                    <h3>Non-Refundable Services</h3>
+                    <ul class="list">
+                        <li>Completed legal consultations</li>
+                        <li>Filing fees paid to government agencies</li>
+                        <li>Completed document preparation</                        <li>Services already rendered or completed</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Refund Process</h2>
+                <p>To request a refund, please follow these steps:</p>
+                <ol class="list">
+                    <li>Submit a written refund request to our support team</li>
+                    <li>Include your account details and reason for refund</li>
+                    <li>Provide any relevant documentation</li>
+                    <li>Wait for our review and response (typically within 5 business days)</li>
+                </ol>
+            </div>
+
+            <div class="section">
+                <h2>Processing Time</h2>
+                <div class="policy-box">
+                    <h3>Refund Processing</h3>
+                    <ul class="list">
+                        <li>Approved refunds will be processed within 10-15 business days</li>
+                        <li>Refunds will be issued through the original payment method</li>
+                        <li>Processing times may vary based on your payment provider</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Special Circumstances</h2>
+                <p>We understand that exceptional circumstances may arise. In such cases, we will review refund requests on a case-by-case basis, considering:</p>
+                <ul class="list">
+                    <li>Medical emergencies</li>
+                    <li>Force majeure events</li>
+                    <li>Technical issues preventing service delivery</li>
+                    <li>Service quality concerns</li>
+                </ul>
+            </div>
+
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>For any questions regarding our refund policy or to submit a refund request, please contact us at:</p>
+                <p>Email: support@legally.sa</p>
+                <p>Phone: +966 11 234 5678</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p>© 2025 Legally. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html> 
