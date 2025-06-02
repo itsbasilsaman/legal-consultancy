@@ -141,6 +141,50 @@
             font-size: 0.9rem;
         }
 
+        /* RTL Support */
+        [dir="rtl"] .list {
+            margin-left: 0;
+            margin-right: 1.5rem;
+        }
+
+        [dir="rtl"] .list li {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        [dir="rtl"] .list li:before {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] .policy-box {
+            border-left: none;
+            border-right: 4px solid var(--accent-color);
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .language-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--white);
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -159,95 +203,143 @@
 <body>
     <div class="header">
         <div class="container">
-            <h1>Refund Policy</h1>
-            <p>Legally - Legal Consultancy Services</p>
+            <div class="language-switcher">
+                <button class="language-btn" data-lang="en">EN</button>
+                <button class="language-btn" data-lang="ar">AR</button>
+            </div>
+            <h1 data-en="Refund Policy" data-ar="سياسة الاسترداد">Refund Policy</h1>
+            <p data-en="Legally - Legal Consultancy Services" data-ar="ليجالي - خدمات الاستشارات القانونية">Legally - Legal Consultancy Services</p>
         </div>
     </div>
 
     <div class="container">
         <div class="content">
             <div class="section">
-                <h2>Introduction</h2>
-                <p>This Refund Policy outlines the terms and conditions for refunds of services provided by Legally. We are committed to ensuring customer satisfaction while maintaining fair and transparent refund practices in accordance with Saudi Arabian consumer protection laws.</p>
+                <h2 data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+                <p data-en="This Refund Policy outlines the terms and conditions for refunds of services provided by Legally. We are committed to ensuring customer satisfaction while maintaining fair and transparent refund practices in accordance with Saudi Arabian consumer protection laws." 
+                   data-ar="توضح سياسة الاسترداد هذه الشروط والأحكام لاسترداد الخدمات المقدمة من ليجالي. نحن ملتزمون بضمان رضا العملاء مع الحفاظ على ممارسات استرداد عادلة وشفافة وفقًا لقوانين حماية المستهلك السعودية.">
+                    This Refund Policy outlines the terms and conditions for refunds of services provided by Legally. We are committed to ensuring customer satisfaction while maintaining fair and transparent refund practices in accordance with Saudi Arabian consumer protection laws.
+                </p>
             </div>
 
             <div class="section">
-                <h2>Eligibility for Refunds</h2>
+                <h2 data-en="Eligibility for Refunds" data-ar="الأهلية للاسترداد">Eligibility for Refunds</h2>
                 <div class="policy-box success">
-                    <h3>Refundable Services</h3>
+                    <h3 data-en="Refundable Services" data-ar="الخدمات القابلة للاسترداد">Refundable Services</h3>
                     <ul class="list">
-                        <li>Initial consultation fees (if no legal advice has been provided)</li>
-                        <li>Subscription fees for unused periods</li>
-                        <li>Document preparation fees (if work has not commenced)</li>
+                        <li data-en="Initial consultation fees (if no legal advice has been provided)" data-ar="رسوم الاستشارة الأولية (إذا لم يتم تقديم أي نصيحة قانونية)">Initial consultation fees (if no legal advice has been provided)</li>
+                        <li data-en="Subscription fees for unused periods" data-ar="رسوم الاشتراك للفترات غير المستخدمة">Subscription fees for unused periods</li>
+                        <li data-en="Document preparation fees (if work has not commenced)" data-ar="رسوم إعداد المستندات (إذا لم يبدأ العمل)">Document preparation fees (if work has not commenced)</li>
                     </ul>
                 </div>
 
                 <div class="policy-box warning">
-                    <h3>Partially Refundable Services</h3>
+                    <h3 data-en="Partially Refundable Services" data-ar="الخدمات القابلة للاسترداد جزئياً">Partially Refundable Services</h3>
                     <ul class="list">
-                        <li>Legal representation fees (pro-rated based on work completed)</li>
-                        <li>Document review services (based on completion percentage)</li>
-                        <li>Training sessions (if cancelled with sufficient notice)</li>
+                        <li data-en="Legal representation fees (pro-rated based on work completed)" data-ar="رسوم التمثيل القانوني (متناسبة مع العمل المكتمل)">Legal representation fees (pro-rated based on work completed)</li>
+                        <li data-en="Document review services (based on completion percentage)" data-ar="خدمات مراجعة المستندات (بناءً على نسبة الإنجاز)">Document review services (based on completion percentage)</li>
+                        <li data-en="Training sessions (if cancelled with sufficient notice)" data-ar="جلسات التدريب (إذا تم إلغاؤها مع إشعار كافٍ)">Training sessions (if cancelled with sufficient notice)</li>
                     </ul>
                 </div>
 
                 <div class="policy-box danger">
-                    <h3>Non-Refundable Services</h3>
+                    <h3 data-en="Non-Refundable Services" data-ar="الخدمات غير القابلة للاسترداد">Non-Refundable Services</h3>
                     <ul class="list">
-                        <li>Completed legal consultations</li>
-                        <li>Filing fees paid to government agencies</li>
-                        <li>Completed document preparation</                        <li>Services already rendered or completed</li>
+                        <li data-en="Completed legal consultations" data-ar="الاستشارات القانونية المكتملة">Completed legal consultations</li>
+                        <li data-en="Filing fees paid to government agencies" data-ar="رسوم التقديم المدفوعة للجهات الحكومية">Filing fees paid to government agencies</li>
+                        <li data-en="Completed document preparation" data-ar="إعداد المستندات المكتمل">Completed document preparation</li>
+                        <li data-en="Services already rendered or completed" data-ar="الخدمات المقدمة أو المكتملة بالفعل">Services already rendered or completed</li>
                     </ul>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Refund Process</h2>
-                <p>To request a refund, please follow these steps:</p>
+                <h2 data-en="Refund Process" data-ar="عملية الاسترداد">Refund Process</h2>
+                <p data-en="To request a refund, please follow these steps:" data-ar="لطلب استرداد المبلغ، يرجى اتباع الخطوات التالية:">To request a refund, please follow these steps:</p>
                 <ol class="list">
-                    <li>Submit a written refund request to our support team</li>
-                    <li>Include your account details and reason for refund</li>
-                    <li>Provide any relevant documentation</li>
-                    <li>Wait for our review and response (typically within 5 business days)</li>
+                    <li data-en="Submit a written refund request to our support team" data-ar="تقديم طلب استرداد مكتوب إلى فريق الدعم لدينا">Submit a written refund request to our support team</li>
+                    <li data-en="Include your account details and reason for refund" data-ar="تضمين تفاصيل حسابك وسبب الاسترداد">Include your account details and reason for refund</li>
+                    <li data-en="Provide any relevant documentation" data-ar="تقديم أي وثائق ذات صلة">Provide any relevant documentation</li>
+                    <li data-en="Wait for our review and response (typically within 5 business days)" data-ar="انتظر مراجعتنا والرد (عادةً خلال 5 أيام عمل)">Wait for our review and response (typically within 5 business days)</li>
                 </ol>
             </div>
 
             <div class="section">
-                <h2>Processing Time</h2>
+                <h2 data-en="Processing Time" data-ar="وقت المعالجة">Processing Time</h2>
                 <div class="policy-box">
-                    <h3>Refund Processing</h3>
+                    <h3 data-en="Refund Processing" data-ar="معالجة الاسترداد">Refund Processing</h3>
                     <ul class="list">
-                        <li>Approved refunds will be processed within 10-15 business days</li>
-                        <li>Refunds will be issued through the original payment method</li>
-                        <li>Processing times may vary based on your payment provider</li>
+                        <li data-en="Approved refunds will be processed within 10-15 business days" data-ar="سيتم معالجة الاستردادات المعتمدة خلال 10-15 يوم عمل">Approved refunds will be processed within 10-15 business days</li>
+                        <li data-en="Refunds will be issued through the original payment method" data-ar="سيتم إصدار الاستردادات من خلال طريقة الدفع الأصلية">Refunds will be issued through the original payment method</li>
+                        <li data-en="Processing times may vary based on your payment provider" data-ar="قد تختلف أوقات المعالجة حسب مزود الدفع الخاص بك">Processing times may vary based on your payment provider</li>
                     </ul>
                 </div>
             </div>
 
             <div class="section">
-                <h2>Special Circumstances</h2>
-                <p>We understand that exceptional circumstances may arise. In such cases, we will review refund requests on a case-by-case basis, considering:</p>
+                <h2 data-en="Special Circumstances" data-ar="الظروف الخاصة">Special Circumstances</h2>
+                <p data-en="We understand that exceptional circumstances may arise. In such cases, we will review refund requests on a case-by-case basis, considering:" 
+                   data-ar="نحن نتفهم أن الظروف الاستثنائية قد تنشأ. في مثل هذه الحالات، سنراجع طلبات الاسترداد على أساس كل حالة على حدة، مع مراعاة:">
+                    We understand that exceptional circumstances may arise. In such cases, we will review refund requests on a case-by-case basis, considering:
+                </p>
                 <ul class="list">
-                    <li>Medical emergencies</li>
-                    <li>Force majeure events</li>
-                    <li>Technical issues preventing service delivery</li>
-                    <li>Service quality concerns</li>
+                    <li data-en="Medical emergencies" data-ar="الطوارئ الطبية">Medical emergencies</li>
+                    <li data-en="Force majeure events" data-ar="أحداث القوة القاهرة">Force majeure events</li>
+                    <li data-en="Technical issues preventing service delivery" data-ar="المشاكل التقنية التي تمنع تقديم الخدمة">Technical issues preventing service delivery</li>
+                    <li data-en="Service quality concerns" data-ar="مخاوف جودة الخدمة">Service quality concerns</li>
                 </ul>
             </div>
 
             <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>For any questions regarding our refund policy or to submit a refund request, please contact us at:</p>
-                <p>Email: support@legally.sa</p>
-                <p>Phone: +966 11 234 5678</p>
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="For any questions regarding our refund policy or to submit a refund request, please contact us at:" 
+                   data-ar="لأي أسئلة حول سياسة الاسترداد أو لتقديم طلب استرداد، يرجى الاتصال بنا على:">
+                    For any questions regarding our refund policy or to submit a refund request, please contact us at:
+                </p>
+                <p data-en="Email: support@legally.sa" data-ar="البريد الإلكتروني: support@legally.sa">Email: support@legally.sa</p>
+                <p data-en="Phone: +966 11 234 5678" data-ar="الهاتف: +966 11 234 5678">Phone: +966 11 234 5678</p>
             </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="container">
-            <p>© 2025 Legally. All rights reserved.</p>
+            <p data-en="© 2025 Legally. All rights reserved." data-ar="© 2025 ليجالي. جميع الحقوق محفوظة.">© 2025 Legally. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageButtons = document.querySelectorAll('.language-btn');
+            const currentLanguage = localStorage.getItem('language') || 'en';
+
+            setLanguage(currentLanguage);
+
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedLang = button.getAttribute('data-lang');
+                    setLanguage(selectedLang);
+                    localStorage.setItem('language', selectedLang);
+                });
+            });
+
+            function setLanguage(lang) {
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.body.classList.toggle('rtl-mode', lang === 'ar');
+
+                const translatableElements = document.querySelectorAll('[data-en], [data-ar]');
+                translatableElements.forEach(element => {
+                    const translation = element.getAttribute(`data-${lang}`);
+                    if (translation) {
+                        if (translation.includes('<span') || translation.includes('<div')) {
+                            element.innerHTML = translation;
+                        } else {
+                            element.textContent = translation;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html> 

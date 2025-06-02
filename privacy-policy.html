@@ -113,6 +113,45 @@
             font-size: 0.9rem;
         }
 
+        /* RTL Support */
+        [dir="rtl"] .list {
+            margin-left: 0;
+            margin-right: 1.5rem;
+        }
+
+        [dir="rtl"] .list li {
+            padding-left: 0;
+            padding-right: 1.5rem;
+        }
+
+        [dir="rtl"] .list li:before {
+            left: auto;
+            right: 0;
+        }
+
+        .language-switcher {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .language-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--white);
+            background: transparent;
+            color: var(--white);
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .language-btn:hover {
+            background: var(--white);
+            color: var(--primary-color);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -131,93 +170,143 @@
 <body>
     <div class="header">
         <div class="container">
-            <h1>Privacy Policy</h1>
-            <p>Legally Admin App</p>
+            <div class="language-switcher">
+                <button class="language-btn" data-lang="en">EN</button>
+                <button class="language-btn" data-lang="ar">AR</button>
+            </div>
+            <h1 data-en="Privacy Policy" data-ar="سياسة الخصوصية">Privacy Policy</h1>
+            <p data-en="Legally Admin App" data-ar="تطبيق ليجالي الإداري">Legally Admin App</p>
         </div>
     </div>
 
     <div class="container">
         <div class="content">
             <div class="section">
-                <h2>Introduction</h2>
-                <p>This Privacy Policy explains how Legally Admin ("we", "our", or "us") collects, uses, shares, and protects information when administrators use the Legally Admin application. The platform is operated in accordance with the laws and regulations of the Kingdom of Saudi Arabia. By using the Legally Admin app, you ("admin" or "you") agree to the practices described in this policy.</p>
+                <h2 data-en="Introduction" data-ar="مقدمة">Introduction</h2>
+                <p data-en="This Privacy Policy explains how Legally Admin ("we", "our", or "us") collects, uses, shares, and protects information when administrators use the Legally Admin application. The platform is operated in accordance with the laws and regulations of the Kingdom of Saudi Arabia. By using the Legally Admin app, you ("admin" or "you") agree to the practices described in this policy." 
+                   data-ar="توضح سياسة الخصوصية هذه كيفية جمع واستخدام ومشاركة وحماية المعلومات عندما يستخدم المسؤولون تطبيق ليجالي الإداري. يتم تشغيل المنصة وفقًا لقوانين وأنظمة المملكة العربية السعودية. باستخدام تطبيق ليجالي الإداري، فإنك توافق على الممارسات الموضحة في هذه السياسة.">
+                    This Privacy Policy explains how Legally Admin ("we", "our", or "us") collects, uses, shares, and protects information when administrators use the Legally Admin application. The platform is operated in accordance with the laws and regulations of the Kingdom of Saudi Arabia. By using the Legally Admin app, you ("admin" or "you") agree to the practices described in this policy.
+                </p>
             </div>
 
             <div class="section">
-                <h2>Information We Collect</h2>
-                <p>As part of providing full administrative functionality, we collect the following types of information:</p>
+                <h2 data-en="Information We Collect" data-ar="المعلومات التي نجمعها">Information We Collect</h2>
+                <p data-en="As part of providing full administrative functionality, we collect the following types of information:" 
+                   data-ar="كجزء من توفير الوظائف الإدارية الكاملة، نقوم بجمع الأنواع التالية من المعلومات:">
+                    As part of providing full administrative functionality, we collect the following types of information:
+                </p>
                 
-                <h3>1. Administrator Information:</h3>
+                <h3 data-en="1. Administrator Information:" data-ar="1. معلومات المسؤول:">1. Administrator Information:</h3>
                 <ul class="list">
-                    <li>Full name, phone number, email address</li>
-                    <li>Login credentials (phone, Google, or Apple authentication)</li>
+                    <li data-en="Full name, phone number, email address" data-ar="الاسم الكامل، رقم الهاتف، البريد الإلكتروني">Full name, phone number, email address</li>
+                    <li data-en="Login credentials (phone, Google, or Apple authentication)" data-ar="بيانات تسجيل الدخول (الهاتف، جوجل، أو أبل)">Login credentials (phone, Google, or Apple authentication)</li>
                 </ul>
 
-                <h3>2. Platform Data Accessed by Admins:</h3>
+                <h3 data-en="2. Platform Data Accessed by Admins:" data-ar="2. بيانات المنصة التي يصل إليها المسؤولون:">2. Platform Data Accessed by Admins:</h3>
                 <ul class="list">
-                    <li>Registered client and lawyer profiles</li>
-                    <li>Wallet balances and payout requests</li>
-                    <li>Session details and chat metadata (but not private message content)</li>
-                    <li>Uploaded video insights for review</li>
-                    <li>Subscription plan details and settings</li>
-                    <li>Banner content and promotions added via the admin dashboard</li>
+                    <li data-en="Registered client and lawyer profiles" data-ar="ملفات العملاء والمحامين المسجلين">Registered client and lawyer profiles</li>
+                    <li data-en="Wallet balances and payout requests" data-ar="أرصدة المحفظة وطلبات الدفع">Wallet balances and payout requests</li>
+                    <li data-en="Session details and chat metadata" data-ar="تفاصيل الجلسات وبيانات الدردشة">Session details and chat metadata</li>
+                    <li data-en="Uploaded video insights for review" data-ar="رؤى الفيديو المرفوعة للمراجعة">Uploaded video insights for review</li>
+                    <li data-en="Subscription plan details and settings" data-ar="تفاصيل خطة الاشتراك والإعدادات">Subscription plan details and settings</li>
+                    <li data-en="Banner content and promotions" data-ar="محتوى البانر والعروض الترويجية">Banner content and promotions</li>
                 </ul>
 
-                <h3>3. Usage and Log Data:</h3>
+                <h3 data-en="3. Usage and Log Data:" data-ar="3. بيانات الاستخدام والسجلات:">3. Usage and Log Data:</h3>
                 <ul class="list">
-                    <li>Actions performed in the admin panel</li>
-                    <li>Timestamps and device/browser information for admin activity</li>
-                    <li>Error logs and diagnostics</li>
-                </ul>
-            </div>
-
-            <div class="section">
-                <h2>How We Use the Information</h2>
-                <p>The information collected is used to:</p>
-                <ul class="list">
-                    <li>Enable admins to manage the Legally and Legally Lawyers apps</li>
-                    <li>Facilitate verification and processing of lawyer payouts</li>
-                    <li>Review and moderate uploaded video content</li>
-                    <li>Monitor session activity and handle client-lawyer disputes</li>
-                    <li>Create and manage subscription plans, promotions, and banners</li>
-                    <li>Enforce platform policies and handle violations</li>
-                    <li>Improve platform security, performance, and reliability</li>
+                    <li data-en="Actions performed in the admin panel" data-ar="الإجراءات التي تم تنفيذها في لوحة المسؤول">Actions performed in the admin panel</li>
+                    <li data-en="Timestamps and device/browser information" data-ar="الطوابع الزمنية ومعلومات الجهاز/المتصفح">Timestamps and device/browser information</li>
+                    <li data-en="Error logs and diagnostics" data-ar="سجلات الأخطاء والتشخيص">Error logs and diagnostics</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Data Security</h2>
-                <p>We implement strong administrative, technical, and physical safeguards to protect sensitive data. This includes:</p>
+                <h2 data-en="How We Use the Information" data-ar="كيفية استخدام المعلومات">How We Use the Information</h2>
+                <p data-en="The information collected is used to:" data-ar="تستخدم المعلومات المجمعة لـ:">The information collected is used to:</p>
                 <ul class="list">
-                    <li>Role-based access control for admin users</li>
-                    <li>Encrypted storage of sensitive information</li>
-                    <li>Secure transmission protocols (HTTPS)</li>
-                    <li>Regular audits of admin actions to prevent misuse</li>
+                    <li data-en="Enable admins to manage the Legally and Legally Lawyers apps" data-ar="تمكين المسؤولين من إدارة تطبيقات ليجالي ومحامي ليجالي">Enable admins to manage the Legally and Legally Lawyers apps</li>
+                    <li data-en="Facilitate verification and processing of lawyer payouts" data-ar="تسهيل التحقق من مدفوعات المحامين ومعالجتها">Facilitate verification and processing of lawyer payouts</li>
+                    <li data-en="Review and moderate uploaded video content" data-ar="مراجعة وتنظيم محتوى الفيديو المرفوع">Review and moderate uploaded video content</li>
+                    <li data-en="Monitor session activity and handle disputes" data-ar="مراقبة نشاط الجلسات ومعالجة النزاعات">Monitor session activity and handle disputes</li>
+                    <li data-en="Create and manage subscription plans" data-ar="إنشاء وإدارة خطط الاشتراك">Create and manage subscription plans</li>
+                    <li data-en="Enforce platform policies" data-ar="تنفيذ سياسات المنصة">Enforce platform policies</li>
+                    <li data-en="Improve platform security and performance" data-ar="تحسين أمان وأداء المنصة">Improve platform security and performance</li>
                 </ul>
             </div>
 
             <div class="section">
-                <h2>Your Rights</h2>
-                <p>As an admin user, you have the right to:</p>
+                <h2 data-en="Data Security" data-ar="أمن البيانات">Data Security</h2>
+                <p data-en="We implement strong administrative, technical, and physical safeguards to protect sensitive data. This includes:" 
+                   data-ar="نقوم بتنفيذ ضمانات إدارية وتقنية ومادية قوية لحماية البيانات الحساسة. وهذا يشمل:">
+                    We implement strong administrative, technical, and physical safeguards to protect sensitive data. This includes:
+                </p>
                 <ul class="list">
-                    <li>Access your own account activity</li>
-                    <li>Request correction of inaccurate profile information</li>
-                    <li>Report misuse or suspicious activity to the platform owner</li>
-                    <li>Request clarification on how your administrative actions are logged or monitored</li>
+                    <li data-en="Role-based access control for admin users" data-ar="التحكم في الوصول القائم على الأدوار للمستخدمين المسؤولين">Role-based access control for admin users</li>
+                    <li data-en="Encrypted storage of sensitive information" data-ar="تخزين مشفر للمعلومات الحساسة">Encrypted storage of sensitive information</li>
+                    <li data-en="Secure transmission protocols (HTTPS)" data-ar="بروتوكولات نقل آمنة (HTTPS)">Secure transmission protocols (HTTPS)</li>
+                    <li data-en="Regular audits of admin actions" data-ar="عمليات تدقيق منتظمة لإجراءات المسؤول">Regular audits of admin actions</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h2 data-en="Your Rights" data-ar="حقوقك">Your Rights</h2>
+                <p data-en="As an admin user, you have the right to:" data-ar="كمستخدم مسؤول، لديك الحق في:">As an admin user, you have the right to:</p>
+                <ul class="list">
+                    <li data-en="Access your own account activity" data-ar="الوصول إلى نشاط حسابك">Access your own account activity</li>
+                    <li data-en="Request correction of inaccurate information" data-ar="طلب تصحيح المعلومات غير الدقيقة">Request correction of inaccurate information</li>
+                    <li data-en="Report misuse or suspicious activity" data-ar="الإبلاغ عن سوء الاستخدام أو النشاط المشبوه">Report misuse or suspicious activity</li>
+                    <li data-en="Request clarification on monitoring" data-ar="طلب توضيح حول المراقبة">Request clarification on monitoring</li>
                 </ul>
             </div>
 
             <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>If you have questions about this Privacy Policy or your responsibilities as an admin, please contact us at support@legally.sa</p>
+                <h3 data-en="Contact Us" data-ar="اتصل بنا">Contact Us</h3>
+                <p data-en="If you have questions about this Privacy Policy or your responsibilities as an admin, please contact us at support@legally.sa" 
+                   data-ar="إذا كانت لديك أسئلة حول سياسة الخصوصية هذه أو مسؤولياتك كمسؤول، يرجى الاتصال بنا على support@legally.sa">
+                    If you have questions about this Privacy Policy or your responsibilities as an admin, please contact us at support@legally.sa
+                </p>
             </div>
         </div>
     </div>
 
     <div class="footer">
         <div class="container">
-            <p>© 2025 Legally. All rights reserved.</p>
+            <p data-en="© 2025 Legally. All rights reserved." data-ar="© 2025 ليجالي. جميع الحقوق محفوظة.">© 2025 Legally. All rights reserved.</p>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const languageButtons = document.querySelectorAll('.language-btn');
+            const currentLanguage = localStorage.getItem('language') || 'en';
+
+            setLanguage(currentLanguage);
+
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const selectedLang = button.getAttribute('data-lang');
+                    setLanguage(selectedLang);
+                    localStorage.setItem('language', selectedLang);
+                });
+            });
+
+            function setLanguage(lang) {
+                document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+                document.body.classList.toggle('rtl-mode', lang === 'ar');
+
+                const translatableElements = document.querySelectorAll('[data-en], [data-ar]');
+                translatableElements.forEach(element => {
+                    const translation = element.getAttribute(`data-${lang}`);
+                    if (translation) {
+                        if (translation.includes('<span') || translation.includes('<div')) {
+                            element.innerHTML = translation;
+                        } else {
+                            element.textContent = translation;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html> 
