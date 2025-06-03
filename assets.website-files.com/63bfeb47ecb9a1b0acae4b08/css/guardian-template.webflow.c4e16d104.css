@@ -3831,9 +3831,69 @@ figure {
   text-align: center;
 }
 
+.rtl-mode .btn-icon {
+  order: 1;
+}
+
+.menu-button {
+  color: white !important;
+}
+
+.menu-animation .top-line,
+.menu-animation .middle-line,
+.menu-animation .bottom-line {
+  background-color: white !important;
+}
+
+.close-menu-btn {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  color: black;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.rtl-mode .close-menu-btn {
+  right: auto;
+  left: 20px;
+}
+
+/* Footer RTL fixes */
+.footer-static-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+
+.rtl-mode .footer-static-row {
+  flex-direction: row-reverse;
+}
+
+.footer-static-row-title {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.footer-static-row div:not(.footer-static-row-title) {
+  text-align: left;
+}
+
+.rtl-mode .footer-static-row div:not(.footer-static-row-title) {
+  text-align: right;
+}
+
+.preserve-direction {
+  text-align: left !important;
+  direction: ltr !important;
+}
+
 .experience-wrapper {
   position: absolute;
-  left: -30px;
+  left: -60px;
   top: auto;
   right: auto;
   bottom: -20px;
@@ -3841,7 +3901,7 @@ figure {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 20px 32px;
+  padding: 30px 15px 25px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
