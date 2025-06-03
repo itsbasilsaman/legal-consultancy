@@ -195,7 +195,7 @@
                 loading="lazy" alt="Litigation Icon" class="legal-practice-slide-icon" />
               <h3 class="h5 font-color-black" data-en="Sharia Law" data-ar="القانون الشرعي">Sharia Law</h3>
               <div class="legal-practice-slide-para">
-                <p class="body-regular body-font-color" data-en="Expert guidance on Sharia-compliant financial transactions, with Saudi Arabia's Islamic legal framework." data-ar="توجيه خبير في المعاملات المالية المطابقة للشريعة، مع الإطار القانوني الإسلامي للمملكة العربية السعودية.">Expert guidance on Sharia-compliant financial transactions, with Saudi Arabia's Islamic legal framework.</p>
+                <p class="body-regular body-font-color" data-en="Expert guidance on Sharia-compliant financial transactions, with Saudi Arabia's Islamic legal framework." data-ar="توجيه خبير في المعاملات المالية المطابقة للشريعة، مع الإطار القانوني الإسلامي للمملكة العربية السعودية">Expert guidance on Sharia-compliant financial transactions, with Saudi Arabia's Islamic legal framework.</p>
               </div>
               <div class="arrow-btn">
                 <div data-en="Explore" data-ar="استكشف">Explore</div>
@@ -212,7 +212,7 @@
                 loading="lazy" alt="Property Rights Icon" class="legal-practice-slide-icon" />
               <h3 class="h5 font-color-black" data-en="Real Estate & Property Law" data-ar="قانون العقارات والممتلكات">Real Estate & Property Law</h3>
               <div class="legal-practice-slide-para">
-                <p class="body-regular body-font-color" data-en="Comprehensive legal services for property transactions, ownership disputes, and compliance with Saudi real estate regulations." data-ar="خدمات قانونية شاملة لمعاملات العقارات ومنازعات الملكية والامتثال للوائح العقارات السعودية.">Comprehensive legal services for property transactions, ownership disputes, and compliance with Saudi real estate regulations.</p>
+                <p class="body-regular body-font-color" data-en="Comprehensive legal services for property transactions, ownership disputes, and compliance with Saudi real estate regulations." data-ar="خدمات قانونية شاملة لمعاملات العقارات ومنازعات الملكية والامتثال للوائح العقارات السعودية">Comprehensive legal services for property transactions, ownership disputes, and compliance with Saudi real estate regulations.</p>
               </div>
               <div class="arrow-btn">
                 <div data-en="Explore" data-ar="استكشف">Explore</div>
@@ -724,7 +724,6 @@
 
   function setLanguage(lang) {
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-
     document.body.classList.toggle('rtl-mode', lang === 'ar');
 
     // Force LTR for specific sections
@@ -735,6 +734,43 @@
         child.style.direction = 'ltr';
       });
     });
+
+    // Set RTL for specific sections when in Arabic
+    if (lang === 'ar') {
+      // Legal practice slides section
+      document.querySelectorAll('.legal-practice-slide').forEach(slide => {
+        slide.style.direction = 'rtl';
+        slide.style.textAlign = 'right';
+        // Add RTL for h3 elements
+        slide.querySelectorAll('h3').forEach(h3 => {
+          h3.style.direction = 'rtl';
+          h3.style.textAlign = 'right';
+        });
+      });
+
+      // Industries section
+      document.querySelectorAll('.industry-block').forEach(block => {
+        block.style.direction = 'rtl';
+        block.style.textAlign = 'right';
+      });
+
+      // Commitment section
+      document.querySelectorAll('.commitment-points-wrapper .point').forEach(point => {
+        point.style.direction = 'rtl';
+        point.style.textAlign = 'right';
+      });
+    } else {
+      // Reset to LTR when in English
+      document.querySelectorAll('.legal-practice-slide, .industry-block, .commitment-points-wrapper .point').forEach(element => {
+        element.style.direction = 'ltr';
+        element.style.textAlign = 'left';
+        // Reset h3 elements to LTR
+        element.querySelectorAll('h3').forEach(h3 => {
+          h3.style.direction = 'ltr';
+          h3.style.textAlign = 'left';
+        });
+      });
+    }
 
     // Preserve direction for numbers and emails
     document.querySelectorAll('.preserve-direction').forEach(element => {
